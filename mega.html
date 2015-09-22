@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+  <!-- title and meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0" name="viewport">
+  <meta content="Advertisement board for Potency Company Limited" name="description">
+
+  <title>Potency AdBoard</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/polyfill.object-fit.css">
+
+  <!-- js -->
+  <script src="js/modernizr.js"></script>
+  <style type="text/css">
+    /*nav#clients{display: none;}*/
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper demo3">
+
+<!--   <header class="primary-header clearfix">
+    <div class="logo">
+      <a href="#">
+        <img src="img/core/logo.svg" onerror="this.src=logo.png" alt="Potency AdBoard">
+      </a>
+    </div>
+    <nav class="primary-nav">
+      <a class="icon cmn-tut" data-title="Back To Main Menu" href="#"></a>
+      <a class="icon cmn-prev" data-title="Pevious Company" href="#"></a>
+      <a class="icon cmn-download" data-title="Download QR" href="#"></a>
+      <a class="icon cmn-archive" data-title="All clients" href="#"></a>
+    </nav>
+  </header><!-- /.primary-header --> 
+
+  <nav class="demo-nav" id="clients">
+    <ul>
+      <li><a href="#">Client 1</a></li>
+      <li><a href="#">Client 2</a></li>
+      <li><a href="#">Client 3</a></li>
+      <li><a href="#">Client 4</a></li>
+      <li><a href="#">Client 5</a></li>
+      <li><a href="#">Client 6</a></li>
+      <li><a href="#">Client 7</a></li>
+      <li><a href="#">Client 8</a></li>
+      <li><a href="#">Client 9</a></li>
+      <li class="active"><a href="#">Client 10</a></li>
+    </ul>
+  </nav><!-- /nav.demo-nav -->
+
+  <main>
+    
+    <div class="container">
+      <div id="cmn-video-demo4__content">
+        <div class="cmn-video-demo4__content--header">
+          <!-- <h2>Potency Company Limited</h2>
+          <p>Adboard Services</p> -->
+          <!-- <a href="#" id="click" onclick="sh_menu()">Touch here to get Started</a> -->
+        </div>
+      </div>
+      <!-- <div class="cmn-video-demo4__content--main">
+        <h2>About Potency Company Limited</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos officia, architecto dolores suscipit tempore a quam possimus enim cumque fugiat modi libero hic earum nulla beatae, laboriosam quis quos ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div> -->
+    </div>
+
+  </main><!-- /main -->
+<!-- 
+  <video id="cmn-video-demo4__video" autoplay loop>
+    <source src="media/vipingo_ridge.mp4" type="video/mp4">
+    <source src="media/demo.ogv" type="video/ogg">
+    <source src="media/demo.webm" type="video/webm">
+    Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+  </video> -->
+  <div id="cmn-video-demo4__video" autoplay loop>
+    <img src="img/background.jpg" width="100%">
+<!--     <source src="media/demo.ogv" type="video/ogg">
+    <source src="media/demo.webm" type="video/webm"> -->
+   <!--  Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+  </div> -->
+  
+</div><!-- /#wrapper -->
+
+
+<!-- js -->
+<script src="js/polyfill.object-fit.js"></script>
+<script>
+  objectFit.polyfill({
+    selector: 'video',
+    fittype: 'cover'
+  });
+</script>
+
+
+<script type="text/javascript">
+
+//Touch to display menu
+var sh_menu = function(){
+  var menu = document.getElementById("clients");
+  document.getElementById("click").style.display = 'hidden';
+  menu.style.display = 'block';
+  
+}
+
+
+//Playlist function
+(function(){
+  var playlist, playlist_index, source, video;
+
+  video = document.getElementById("cmn-video-demo4__video");
+  source = video.getElementsByTagName("source");
+
+  //Playlist statement
+  playlist = ["media/Kelly_Rowland_Lay_It_On_Me_ft_Big_Sean.mp4","media/vipingo_ridge.mp4","media/Before_We_Go.mp4","media/Sign_of_a_Victory.mp4"];
+
+  playing_index = 0;
+
+  video.addEventListener('ended', function () {
+    source.src = "media/Before_We_Go.mp4"; //playlist[playing_index++]
+  });
+})();
+
+</script>
+
+</body>
+</html>

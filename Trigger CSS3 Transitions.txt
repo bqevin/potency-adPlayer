@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<style>
+div#box1 {
+	background: #9DCEFF;
+	width: 400px;
+	height: 200px;
+}
+</style>
+<script>
+function changeBG(el,clr){
+	var elem = document.getElementById(el);
+	elem.style.transition = "background 1.0s linear 0s";
+	elem.style.background = clr;
+}
+</script>
+<body>
+<button onclick="changeBG('box1','#F0F')">Magenta</button>
+<button onclick="changeBG('box1','#0C0')">Green</button>
+<button onclick="changeBG('box1','#9DCEFF')">Origninal</button>
+<div id="box1">Content in box 1 ...</div>
+</body>
+</html>
+
+-------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#box1 {
+	background: #9DCEFF;
+	width: 400px;
+	height: 200px;
+}
+</style>
+<script>
+function fadeOut(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "opacity 0.5s linear 0s";
+	elem.style.opacity = 0;
+}
+function fadeIn(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "opacity 0.5s linear 0s";
+	elem.style.opacity = 1;
+}
+</script>
+</head>
+<body>
+<button onclick="fadeOut('box1');">Fade out</button>
+<button onclick="fadeIn('box1');">Fade in</button>
+<div id="box1">Content in box 1 ...</div>
+</body>
+</html>
+--------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#box1 {
+	background: #9DCEFF;
+	width: 400px;
+	height: 200px;
+	overflow: hidden;
+}
+</style>
+<script>
+function slideOpen(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.2s linear 0s";
+	elem.style.height = "200px";
+}
+function slideClosed(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.2s linear 0s";
+	elem.style.height = "0px";
+}
+</script>
+</head>
+<body>
+<button onclick="slideClosed('box1');">slideClosed</button>
+<button onclick="slideOpen('box1');">slideOpen</button>
+<div id="box1">Content in box 1 ...</div>
+</body>
+</html>
+-------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#box1 {
+	background: #9DCEFF;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 50px;
+	left: -400px;
+}
+</style>
+<script>
+function slideIn(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "left 0.5s ease-in 0s";
+	elem.style.left = "0px";
+}
+function slideOut(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "left 0.5s ease-out 0s";
+	elem.style.left = "-400px";
+}
+</script>
+</head>
+<body>
+<button onclick="slideIn('box1');">slide in</button>
+<button onmouseover="slideOut('box1');">slide out</button>
+<div id="box1">Content in box 1 ...</div>
+</body>
+</html>
+
+----------------------------
+
+
